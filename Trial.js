@@ -1,51 +1,56 @@
-// this is a function for age
-function age() {
-    var age = 57;
-    let person = {
-        firstName: "Juveline",
-        lastName: "cynthia",
-        Age: 26,
-        Height: 267,
-        Weight: 67,
-        fullName: function() { // this is a method
-            var details = (this.firstName + " " + this.lastName);
-            console.log(details)
+// this is an object
+let person = {
+    firstName: "Juveline",
+    lastName: "cynthia",
+    Age: 26,
+    Height: 267,
+    Weight: 67,
+    fullName: function() { // this is a method
+        var details = (this.firstName + " " + this.lastName);
+        console.log(details)
 
 
-        }
-    };
-    console.log(person.lastName) /
-        person.fullName()
+    }
+};
 
-    fee(); // this is Hoisting
+console.log(person.Height)
+console.log(person.lastName)
+person.fullName()
 
 
-    function fee() {
-        var a = 4;
-        console.log(a)
 
-        function foo() {
-            var b = 3;
-            var c = a + b
-            console.log(b)
 
-            function fuu() {
+function fee() {
+    var a = 4;
 
-                var d = 5;
+    console.log(a)
 
-                var e = a * b * c
-                console.log(d);
+    function foo() {
+        var b = 3;
+        var c = a + b
+        console.log(b)
 
-            };
-            fuu()
+        function fuu() {
+            "use strict"
+            var d = 5;
+            var e = a + b + d
+
+            console.log(e);
+
         };
-        foo()
+        fuu()
     };
-    fee() //this is nesting
+    foo()
+};
+fee()
 
+//this is nesting
+function age() {
+    var age = 68;
     if (age >= 70) {
         console.log("A ");
-    } else if (age >= 60) {
+    } else
+    if (age >= 60) {
         console.log("B ");
     } else if (age >= 50) {
         console.log("C ");
