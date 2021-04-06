@@ -1,13 +1,23 @@
 class KioskCalc {
-    constructor(Dress, Quantity) {
-        this.Dress = "Casual";
-        this.Quantity = 4;
+    constructor(Wear, Quantity) {
+        this.Wear = "Dress";
+        this.Quantity = 3;
+        this.Shoes = "Shoes";;
+        this.Quantity1 = 2;
+
+    };
+
+    getTotalDetails() {
+        return `${this.Quantity} ${this.Wear} for dollars ${100*this.Quantity}`;
+    }
+    getTotalValue() {
+        return `${ this.Quantity1 } ${ this.Shoes }for dollars ${ 80 * this.Quantity1}`;
 
     }
 
-    getDetails() {
-        return `${this.Dress} ${this.Quantity} for dollars ${100*this.Quantity}`;
-    }
+
 }
-var kioskCalc = new KioskCalc("Casual", 4)
-console.log(kioskCalc.getDetails());
+kioskCalc = new KioskCalc("Dress", "Shoes");
+
+console.log(kioskCalc.getTotalDetails());
+console.log(kioskCalc.getTotalValue());
